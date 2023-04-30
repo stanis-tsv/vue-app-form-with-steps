@@ -1,0 +1,111 @@
+.container input[type='text'],
+.container input[type='tel'],
+.container input[type='email'],
+.container select {
+  height: 40px;
+  width: 345px;
+  display: flex;
+  margin: 5px 20px 13px 0;
+  border: 1px solid rgba(29, 36, 82, 0.1);
+  border-radius: 8px;
+  padding: 0 8px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+.container label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(29, 36, 82, 0.5);
+}
+.footer {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+  width: 19.5px;
+  height: 19.5px;
+  background: url('assets/info.svg');
+  background-position: center;
+  cursor: pointer;
+  align-self: center;
+  margin-left: 8px;
+}
+.next {
+  width: 109px;
+  height: 40px;
+  background-color: #fff;
+  background-image: url('assets/next.svg');
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+}
+.next:hover {
+  transition: .3s;
+  opacity: .8;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+}
+.danger,
+.primary {
+  align-self: center;
+  margin-right: 15px;
+  color: #d63b3b;
+}
+.primary {
+  color: #1f9e38;
+}
+input[type='checkbox'] {
+  width: 18px;
+  appearance: none;
+  border: none;
+  outline: none;
+  margin: 0 8px 0 0;
+  padding: 0;
+}
+input[type='checkbox']:after {
+  content: '';
+  display: flex;
+  width: 18px;
+  height: 19px;
+  background: url('assets/checkboxOff.svg');
+  background-size: 18px 19px;
+  cursor: pointer;
+}
+input[type='checkbox']:checked:after {
+  background: url('assets/checkboxOn.svg');
+}
+.form-control-check label {
+  color: #1D2452;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 775px) {
+  .container input[type='text'],
+  .container input[type='tel'],
+  .container input[type='email'],
+  .container select {
+    flex-direction: column;
+  }
+  .container {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 580px) {
+  .danger,
+  .primary {
+    margin-right: 0;
+  }
+  .next {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+}
+
+
